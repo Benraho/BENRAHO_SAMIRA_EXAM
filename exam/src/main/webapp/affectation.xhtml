@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Affectation Form</title>
+</h:head>
+<h:body>
+    <h1>Affectation Form</h1>
+    <h:form>
+        <h:panelGrid columns="2">
+            <h:outputLabel for="employeeName" value="Employee Name:" />
+            <h:inputText id="employeeName" value="#{affectationBean.employeeName}" required="true" />
+
+            <h:outputLabel for="projectName" value="Project Name:" />
+            <h:inputTextarea id="projectName" value="#{affectationBean.projectName}" rows="5" cols="30" required="true" />
+
+            <h:outputLabel for="implication" value="Implication:" />
+            <h:inputText id="implication" value="#{affectationBean.implication}" required="true" />
+
+            <h:panelGroup />
+            <h:commandButton value="Affecter Projet" action="#{affectationBean.affecterProjet}" />
+        </h:panelGrid>
+    </h:form>
+</h:body>
+</html>
